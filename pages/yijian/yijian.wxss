@@ -1,0 +1,21 @@
+.conter{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+textarea{
+  
+  box-sizing: border-box;
+  width: 90%;
+  border: 2rpx solid #555;
+  margin: 0 auto;
+  margin-top: 20%;
+}
+button{
+  width: 90%;
+  margin-top: 20%;
+}
+button:hover{
+  background: #3399FF;
+  color: #fff;
+}

@@ -1,0 +1,50 @@
+<view class="conter">
+  <view class='title'>
+    <view bindtap='translate' class="{{!font==true?'font':''}}">停车点</view>
+    <view bindtap='change' class="{{font==true?'font':''}}">轨迹点</view>
+  </view>
+  <view class='head' wx:if="{{!font}}">
+    <view>时间</view>
+    <view>停车时长</view>
+    <view>温度℃</view>
+    <view>地点</view>
+  </view>
+  <view class='head' wx:if="{{font}}">
+    <view>时间</view>
+    <view>速度km/h</view>
+    <view>温度℃</view>
+    <view>地点</view>
+  </view>
+  <view class='list'>
+    <view class='scrol' wx:if="{{!font}}">
+      <block wx:for="{{data}}">
+        <view class='contont_list' wx:if="{{item.park>0?true:false}}">
+          <view>{{item.date}}</view>
+          <view>{{item.park}}</view>
+          <view>
+            [<text wx:if="{{item.tem[0]}}">{{item.tem[0]}}</text>
+            <text wx:if="{{item.tem[1]}}">,{{item.tem[1]}}</text>
+            <text wx:if="{{item.tem[2]}}">,{{item.tem[2]}}</text>
+            <text wx:if="{{item.tem[3]}}">,{{item.tem[3]}}</text>]
+          </view>
+          <view>{{item.place}}</view>
+        </view>
+      </block>
+    </view>
+    <view class='scrol' wx:if="{{font}}">
+      <block wx:for="{{data}}">
+        <view class='contont_list'>
+          <view>{{item.date}}</view>
+          <view>{{item.speed}}</view>
+          <view>
+            [<text wx:if="{{item.tem[0]}}">{{item.tem[0]}}</text>
+            <text wx:if="{{item.tem[1]}}">,{{item.tem[1]}}</text>
+            <text wx:if="{{item.tem[2]}}">,{{item.tem[2]}}</text>
+            <text wx:if="{{item.tem[3]}}">,{{item.tem[3]}}</text>]
+          </view>
+          <view>{{item.place}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

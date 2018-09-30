@@ -1,0 +1,4 @@
+<view class='conter'>
+  <textarea placeholder="期待你的反馈" value='' bindinput='fankui'></textarea>
+  <button bindtap='btn'>提交</button>
+</view>

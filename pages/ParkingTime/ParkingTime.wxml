@@ -1,0 +1,29 @@
+<!--pages/timing/timing.wxml-->
+<view class='conter' bindtap='conter'>
+  <view class='center'>
+    <view catchtap='selet_date'>
+      <input value='{{value_date}}'></input>
+      <image class='icon1' src='image/drop-downchoice_selected@3x.png'></image>
+      <view class='selet_date' wx:if="{{selet_date}}">
+         <block wx:for="{{dateinfo}}">
+           <view catchtap='date_list' data-name='{{item}}'>{{item}}</view>
+         </block>
+      </view>
+    </view>
+    <view>
+      <input placeholder='≥请输入时间间隔(分钟)' value='{{interval}}' bindinput='interval'></input>
+    </view>
+    <view catchtap='selet_equip'>
+      <input placeholder='请选择设备号' value='{{equip_value}}' bindinput='equip_value'></input>
+      <image class='icon1' src='image/drop-downchoice_selected@3x.png'></image>
+      <view class='selet_equip' wx:if="{{selet_equip}}">
+        <view class='selet_dates'>
+         <block wx:for="{{equipment_selects}}">
+           <view catchtap='equip_list' data-name='{{item.text}}' data-id='{{item.id}}'>{{item.text}}</view>
+         </block>
+      </view>
+      </view>
+    </view>
+    <button catchtap='submit'>查询</button>
+  </view>
+</view>

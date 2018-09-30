@@ -1,0 +1,5 @@
+<!--pages/feedback/feedback.wxml-->
+<view class='conter'>
+  <textarea id="TextArea1" placeholder='请输入意见内容' bindinput='inputs' value='{{inputs}}'></textarea>
+  <button class="{{inputs.length>0?'hover':''}}" bindtap="jump">提交</button>
+</view>

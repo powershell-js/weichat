@@ -1,0 +1,15 @@
+<!--pages/My_attention/My_attention.wxml-->
+<view class='conter' bindtouchmove='onPageScroll'>
+  <view class='test' style='top:{{to}}px;left:{{le}}px;'></view>
+  <view>
+    <view class='list' wx:for="{{list}}">
+      <view class='image' data-num='{{item.vehicleid}}' bindtap='follow'>
+        <image src='image/Focuson_icon@3x.png'></image>
+      </view>
+      <view class='License_plate' data-num='{{item.vehicleid}}' bindtap='follow'>
+       {{item.vehicle_no}}
+      </view>
+
+    </view>
+  </view>
+</view>

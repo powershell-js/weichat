@@ -1,0 +1,103 @@
+.conter {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  box-sizing: border-box;
+  /* border:2rpx solid red; */
+  display: flex;
+  flex-direction: column;
+  border-radius: 10rpx;
+  /* opacity:0.4!important; */
+  /* padding: 20rpx; */
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  z-index: 90 !important;
+}
+
+.top {
+  padding: 20rpx;
+  box-sizing: border-box;
+  /* border:2rpx solid red; */
+  background: rgba(250, 251, 250, 0.438);
+ 
+}
+
+.center {
+  padding: 20rpx;
+  background: rgba(250, 251, 250, 0.438);
+  /* opacity: 0.8; */
+  font-size: 28rpx;
+}
+
+.positions {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.roadName {
+  box-sizing: border-box;
+  text-align: left;
+  width: 420rpx;
+  display: flex;
+  flex-direction: row;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-line;
+}
+
+.bottom {
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  background: rgba(250, 251, 250, 0.438);
+  opacity: 0.8;
+  display: flex;
+  flex-direction: row;
+  /* border-top:2rpx solid #555; */
+}
+
+.line {
+  width: 90%;
+  margin: 0 auto;
+  border: 2rpx solid #e2eafb;
+}
+
+.bottom1{
+  font-size: 24rpx;
+  width: 16.6%;
+  
+}
+
+cover-image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: -5rpx;
+}
+
+.share {
+  font-size: 24rpx;
+  width: 52rpx;
+  margin-top: -18rpx;
+}
+
+button {
+  position: null !important;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  text-decoration: none;
+  border-radius: 0;
+  border: 0rpx solid rgba(250, 251, 250, 0)!important;
+  background: rgba(250, 251, 250, 0);
+}
+.button-hover{
+  background: rgba(250, 251, 250, 0);
+}

@@ -1,0 +1,33 @@
+/**index.wxss**/
+.containerew{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  /* border:2rpx solid red; */
+ 
+}
+.list{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  /* border:2rpx solid blue; */
+  /* transform:rotate(90deg); */
+  /* margin-left: -294rpx; */
+  /* margin-top:244rpx; */
+  /* padding:  */
+}
+ec-canvas {
+  box-sizing: border-box;
+  /* border:2rpx solid black; */
+  /* width: 300rpx;
+  height: 400rpx; */
+  
+}
+.cheliang canvas{
+  /* width: 90%!important;
+  height: 90%!important;
+  margin-left: 10rpx; */
+  /* width: 700rpx!important;
+  height: 700rpx!important; */
+/* margin-left: 10rpx; */
+}

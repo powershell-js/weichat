@@ -1,0 +1,14 @@
+<swiper class='conter'>
+  <swiper-item class='contain' bindchange="huadong">
+    <view class='list'>1</view>
+    <view class='list'>1</view>
+    <view class='list'>1</view>
+    <view class='list'>1</view>
+    <view class='list'>1</view>
+    <view class='list'>1</view>
+    <view class='list'>1</view>
+    <view class='list'>1</view>
+    <view class='list'>1</view>
+    <view class='list'>1</view>
+  </swiper-item>
+</swiper>

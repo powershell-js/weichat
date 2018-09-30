@@ -1,0 +1,85 @@
+<!--pages/All_vehicles/All_vehicles.wxml-->
+<view class='All_vehicles'>
+  <view class='All_vehicles_head'>
+    <!-- <image src='image/backgroun.png' style='width:100%;height:200rpx;'></image> -->
+  </view>
+  <view class='All_vehicles_conter'>
+    <view class='All_vehicles_center'>
+      <!-- <view class='All_vehicles_input'>
+        <input class='search1' placeholder-class="place-holder" value-class="place-holder" placeholder='请输入车牌号' value='' bindinput='search_value' wx:if="{{searchShow}}"></input>
+        <view class='search2' wx:if="{{!searchShow}}" bindtap='search2'>所有车辆</view>
+        <view>
+          <image src='image/input.png' bindtap='search'></image>
+        </view>
+      </view> -->
+      <view class='All_vehicles_yun'>
+        <view class="All_vehicles_yun_1 {{dataname=='所有'?'border_show':''}}" data-name="所有" bindtap='border_show'>
+          <view>所有</view>
+          <view>
+            <text decode="{{true}}"></text> {{allInfo.total}}</view>
+        </view>
+        <view class="All_vehicles_yun_1 {{dataname=='运行'?'border_show':''}}" data-name="运行" bindtap='border_show'>
+          <view>
+            <image src='image/运行@3x.png'></image> 运行</view>
+          <view>
+            <text decode="{{true}}"></text> {{allInfo.run}}</view>
+        </view>
+        <view class="All_vehicles_yun_1 {{dataname=='停止'?'border_show':''}}" data-name="停止" bindtap='border_show'>
+          <view>
+            <image src='image/停止@3x.png'></image> 停止</view>
+          <view>
+            <text decode="{{true}}"></text> {{allInfo.stop}}</view>
+        </view>
+        <view class="All_vehicles_yun_1 {{dataname=='报警'?'border_show':''}}" data-name="报警" bindtap='border_show'>
+          <view>
+            <image src='image/报警@3x.png'></image> 报警</view>
+          <view>
+            <text decode="{{true}}"></text> {{allInfo.warn}}</view>
+        </view>
+        <view class="All_vehicles_yun_1 {{dataname=='异常'?'border_show':''}}" data-name="异常" bindtap='border_show'>
+          <view>
+            <image src='image/异常@3x.png'></image> 异常</view>
+          <view>
+            <text decode="{{true}}"></text> {{allInfo.excp}}</view>
+        </view>
+      </view>
+      <view class='scolls'>
+        <view class='scol'>
+          <view class='All_vehicles_list' wx:for="{{allInfo.list}}" wx:key="{{index}}">
+            <view class='All_vehicles_list_1' data-id='{{item.vehicleId}}' bindtap='jumpdetail' wx:if="{{titleShow==0?true:(titleShow==item.status?true:false)}}">
+              <view class='left'>
+                <view class="{{item.status==1?'run':(item.status==2?'stop':(item.status==3?'warn':'ext'))}}"></view>
+              </view>
+              <view class='center'>
+                <view>{{item.vehicleNo}}</view>
+                <view>温度：[{{item.tmpStatus}}℃]</view>
+                <view>时间：{{item.gpsTime}}
+                  <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text><text wx:if='{{item.power}}'>电量:{{item.power}}%</text> </view>
+                <view class='text'>位置：{{item.roadName}}</view>
+              </view>
+              <view class='right'>
+                <image src='image/jump@3x.png'></image>
+              </view>
+            </view>
+            <!-- <view class='All_vehicles_list_1'>
+          <view class='left'>
+            <view></view>
+          </view>
+          <view class='center'>
+            <view>29078-29078</view>
+            <view>温度：[26.4℃]</view>
+            <view>时间:2018-09-13 08:49:41 电量:100%</view>
+            <view class='text'>位置:上海市嘉定区江桥镇鹤旋路30号万达广场(江桥店)222222222222222222222222</view>
+          </view>
+          <view class='right'><image src='image/jump@3x.png'></image></view>
+        </view> -->
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<cover-view class='swit' style='right:{{widths}}px;bottom:{{heights}}px;' bindtap='swit'>
+  <cover-image class='swit_img' src="image/switc_TAB@3x.png"></cover-image>
+</cover-view>>

@@ -1,0 +1,28 @@
+<!-- <view>
+  <view>城市：{{weather.liveData.province}}-{{weather.liveData.city}}</view>
+</view>
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+</view>
+<view class="map_text">
+  <text class="h1">{{textData.name}}</text>
+  <text>{{textData.desc}}</text>
+</view> -->
+<view class='conter'>
+  <view class='center' style='width:{{widths}}px'>
+    <view>1{{widths}}</view>
+    <view>2</view>
+    <view>13</view>
+    <view>4</view>
+    <view>5</view>
+    <view>6</view>
+  </view>
+  <view>
+   <view class="container wxml-container">
+  <text class="topic-group">下载</text>
+  <button class="button" bindtap="downloadFromServer">下载数据</button>
+  <progress class='usual_progres' show-info percent='{{downloadPercent}}'></progress>  
+</view>
+
+  </view>
+</view>

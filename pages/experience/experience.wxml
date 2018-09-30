@@ -1,0 +1,20 @@
+<!--pages/experience/experience.wxml-->
+<view class='conter'>
+  <view class='title'>
+    <view class='computer'>
+      <view><text class='red'>*</text>  公司名称</view>
+      <input bindinput='computer' value='{{computer}}' placeholder='公司名称'></input>
+    </view>
+    <view class='computer'>
+      <view><text class='red'>*</text>  联系电话</view>
+      <input bindinput='telepho' value='{{telepho}}' placeholder='联系电话'></input>
+    </view>
+    <view class='computer'>
+      <view><text class='red'>*</text>  联系邮箱</view>
+      <input bindinput='email' value='{{email}}' placeholder='联系邮箱'></input>
+    </view>
+  </view>
+  <view class='bottom'>
+     <button bindtap='submit'>提交申请</button>
+  </view>
+</view>

@@ -1,0 +1,203 @@
+<!-- <view>
+   <view class='text'>121234234324324312321322323321213129</view>
+
+  <view class='input'>
+    <input value='{{liste}}' bindinput='liSte'></input>
+    <view style='display:inline-block;' bindtap='checks'>下拉框</view>
+  </view>
+  <view wx:if="{{checkedshow}}"> -->
+<!-- 
+    <checkbox-group bindchange="checkboxChange" checked="{{checkeds}}" >
+    <label>选择全部</label>
+      <checkbox checked="{{checkeds}}" bindtap='allsel'/>
+      <view wx:for="{{abc}}">
+         <view class='list'>
+            <label>{{item}}</label>
+            <checkbox value="{{item}}" checked="{{checked}}" />
+         </view>
+      </view>
+    </checkbox-group>
+  </view>
+</view> -->
+<!-- <wxs module="numFr" src="../../filter/numFr.wxs"></wxs> -->
+
+
+<view class='contain' style='height:{{winheight}}'>
+  <!-- 运营看板 -->
+  <view class='head'>
+    <view class='head_list head_list1' bindtap='userinfo'>
+      <image src='image/mine_icon@3x.png'></image>
+    </view>
+    <view class='head_list head_list2'></view>
+    <view class='head_list head_list3' bindtap='Message_list'>
+      <image src='image/message_icon@3x.png'></image>
+    </view>
+  </view>
+  <!-- 柱状图 -->
+  <view class='table'>
+    <view class='echart'>
+      <view class='echart_head' bindtap='Allvehicles'>
+        <view class='echart_hide'>
+          <image src='image/overview_icon@3x.png'></image>
+          <view>全部({{total}})</view>
+        </view>
+        <view></view>
+        <view class='echart_show'>
+          <image src='image/jumppage_icon@3x.png'></image>
+        </view>
+      </view>
+      <view class='bar'>
+
+
+        <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas>
+      </view>
+    </view>
+    <view class='paihang'>
+      <view class='paihang_list'>
+        <image src='image/background_1@3x.png'></image>
+        <view class='list_blue'>
+          <view>上周行驶总里程</view>
+          <view>{{sum}}</view>
+          <view>(公里)</view>
+        </view>
+      </view>
+      <view class='paihang_list'>
+        <image src='image/background_2@3x.png'></image>
+        <view class='list_blue'>
+          <view>上周日均里程</view>
+          <view>{{avgmile}}</view>
+          <view>(公里/车)</view>
+        </view>
+      </view>
+      <view class='paihang_list'>
+        <image src='image/background_3@3x.png'></image>
+        <view class='list_blue'>
+          <view>上周日均运行时长</view>
+          <view>{{avgRunTime}}</view>
+          <view>(小时/车)</view>
+        </view>
+      </view>
+    </view>
+    <view class='echart Rankings'>
+      <view class='Rankings_up Rankings_all'>
+        <view bindtap='tempData'>周超温排行</view>
+        <view class='text_align'>
+          <view>{{tempData[0].vehicleNo}}</view>
+          <view>{{tempData[1].vehicleNo}}</view>
+          <view>{{tempData[2].vehicleNo}}</view>
+          <view>{{tempData[3].vehicleNo}}</view>
+          <view>{{tempData[4].vehicleNo}}</view>
+        </view>
+      </view>
+      <view class='Rankings_li Rankings_all'>
+        <view bindtap='mileData'>周里程排行</view>
+        <view class='text_align'>
+          <view>{{mileData[0].vehicleNo}}</view>
+          <view>{{mileData[1].vehicleNo}}</view>
+          <view>{{mileData[2].vehicleNo}}</view>
+          <view>{{mileData[3].vehicleNo}}</view>
+          <view>{{mileData[4].vehicleNo}}</view>
+        </view>
+      </view>
+      <view class='Rankings_park Rankings_all'>
+        <view bindtap='stopData'>周停车排行</view>
+        <view class='text_align'>
+          <view>{{stopData[0].vehicleNo}}</view>
+          <view>{{stopData[1].vehicleNo}}</view>
+          <view>{{stopData[2].vehicleNo}}</view>
+          <view>{{stopData[3].vehicleNo}}</view>
+          <view>{{stopData[4].vehicleNo}}</view>
+        </view>
+      </view>
+      <view class='distribution Rankings_all'>
+        <view bindtap='area'>车辆排行</view>
+        <view class='text_align'>
+          <view wx:if="{{area[0].pro}}">{{area[0].pro}}({{area[0].num}})</view>
+          <view wx:if="{{area[1].pro}}">{{area[1].pro}}({{area[1].num}})</view>
+          <view wx:if="{{area[2].pro}}">{{area[2].pro}}({{area[2].num}})</view>
+          <view wx:if="{{area[3].pro}}">{{area[3].pro}}({{area[3].num}})</view>
+          <view wx:if="{{area[4].pro}}">{{area[4].pro}}({{area[4].num}})</view>
+        </view>
+      </view>
+    </view>
+    <view class='Report_form'>
+      <view class='query'>报表查询</view>
+      <view class='Slide'>
+        <view class='swiper' style='width:{{widths}}rpx'>
+          <block wx:for="{{urldata}}" wx:for-index="index">
+            <view class='swiper1' wx:if="{{url_data[index].hide}}">
+              <view class='histry'>
+                <image src='{{item.url}}'></image>
+              </view>
+              <view class='histry_list1' data-hi="{{url_data[index].name}}" bindtap="swipe">
+                <image src='{{url_data[index].url}}'></image>
+                <view class='list_c'>{{url_data[index].name}}</view>
+              </view>
+            </view>
+          </block>
+        </view>
+        <!-- <swiper class="swiper">
+          <block wx:for="{{urldata}}" wx:for-index="index">
+            <swiper-item wx:if="{{url_data[index].hide}}">
+              <view class='histry'>
+                <image src='{{item.url}}'></image>
+              </view>
+              <view class='histry_list' data-hi="{{url_data[index].name}}" bindtap="swipe">
+                <image src='{{url_data[index].url}}'></image>
+                <view class='list_c'>{{url_data[index].name}}</view>
+              </view>
+            </swiper-item>
+          </block>
+        </swiper> -->
+
+      </view>
+    </view>
+  </view>
+  <!-- 用户信息 -->
+  <view class='user' style='width:{{user_width}}' bindtap='userinfo_hide' wx:if="{{userinfo_show}}" bindtouchmove="userinfo_hide">
+    <cover-view class='user_left'>
+      <cover-view class='user_first'>
+        <cover-image class='user_first1-1' src='image/750-522background.jpg'></cover-image>
+        <cover-view class='user_first_1'>
+          <cover-view class='user_first_left'>
+            <cover-image class='user_first_left1' src='image/touxiang@3x.png'></cover-image>
+          </cover-view>
+          <cover-view class='user_first_right'>{{username}}</cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-view class='user_second'>
+        <cover-view catchtap='Contact_us' class='user_second1'>
+          <cover-image class='user_second1_image' src='image/Customerservice@3x.png'></cover-image>
+          <cover-view>联系我们</cover-view>
+        </cover-view>
+        <cover-view>
+          <cover-view catchtap='modify' class='user_second1'>
+            <cover-image class='user_second1_image' src='image/password@3x.png'></cover-image>
+            <cover-view>修改密码</cover-view>
+          </cover-view>
+        </cover-view>
+        <cover-view>
+          <cover-view catchtap="feedback" class='user_second1'>
+            <cover-image class='user_second1_image' src='image/feedback@3x.png'></cover-image>
+            <cover-view>意见反馈</cover-view>
+          </cover-view>
+        </cover-view>
+        <cover-view>
+          <cover-view catchtap="Myattention" class='user_second1'>
+            <cover-image class='user_second1_image' src='image/Focuson_icon@3x.png'></cover-image>
+            <cover-view>我的关注</cover-view>
+          </cover-view>
+        </cover-view>
+        <cover-view class='space'>
+          <cover-view catchtap='Edition' class='user_second1'>
+            <cover-image class='user_second1_image' src='image/Theversionnumber@3x.png'></cover-image>
+            <cover-view>版本号</cover-view>
+          </cover-view>
+          <cover-view class='version'>{{version}}</cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-view class='user_third' catchtap='Exit_logon'>退出登录</cover-view>
+    </cover-view>
+    <view class='user_right'></view>
+  </view>
+</view>

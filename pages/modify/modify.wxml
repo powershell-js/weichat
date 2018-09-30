@@ -1,0 +1,18 @@
+<!--pages/modify/modify.wxml-->
+<view class='conter'>
+  <view class='list1'>
+    <image src='image/37-Password.png'></image>
+    <input bindinput='oldPwd' password='true' value='{{oldPwd}}' placeholder='原密码'></input>
+  </view>
+  <view class='list2'>
+    <view> 
+      <image src='image/37-Password.png'></image>
+      <input bindinput='newPwd' password='true' value='{{newPwd}}' placeholder='新密码'></input>
+    </view>
+    <view>
+      <image src='image/37-Password.png'></image>
+      <input bindinput='newPwds' password='true' value='{{newPwds}}' placeholder='确认新密码'></input>
+    </view>
+  </view>
+  <view class='list3' bindtap='Determine'>确定</view>
+</view>

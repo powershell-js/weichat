@@ -1,0 +1,140 @@
+.pick_datetime {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    overflow:hidden;
+}
+.pick_datetime_tool {
+    display:flex;
+    justify-content:space-between;
+    height:92rpx;
+    line-height:92rpx;
+    border-top:4rpx solid #eee;
+    border-bottom:4rpx solid #eee;
+    padding:0 20rpx;
+}
+.pick_datetime_ok {font-weight:bold;}
+.pick_datetime_clear {color:#666;}
+.pick_datetime picker-view {
+    font-size:34rpx;
+}
+.pick_datetime_column {
+    height:40px;
+    line-height:40px;
+    text-align:center;
+}
+view.footer{
+  z-index:100;
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+.form {
+  padding:20px;
+  border:1px solid #ccc;
+  margin:2px 0;
+}
+.pick_datetime {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    overflow:hidden;
+    background:#fff;
+}
+.pick_datetime_tool {
+    display:flex;
+    justify-content:space-between;
+    height:92rpx;
+    line-height:92rpx;
+    border-top:4rpx solid #eee;
+    border-bottom:4rpx solid #eee;
+    padding:0 20rpx;
+}
+.pick_datetime_ok {font-weight:bold;}
+.pick_datetime_clear {color:#666;}
+.pick_datetime picker-view {
+    font-size:34rpx;
+}
+.pick_datetime_column {
+    height:40px;
+    line-height:40px;
+    text-align:center;
+}  
+.section{
+    background-color: #d1E9E9;
+    margin: 10% 0;
+    height: 40px;line-height: 40px;
+    padding-left: 5%
+}
+.picker text{
+display: inline-block;
+    float: right;
+   
+}
+.picker1{
+    /*background-color: blue;*/
+}
+.picker2{
+    /*background-color: red;*/
+      
+}
+.pickers1{
+    width: 60%;
+    display: inline-block;
+     float: right;
+      margin-right: 32%
+}
+.pickers{
+    position:relative;
+z-index:9;
+width:20%;
+float:right;
+/*background-color:blue; */
+display:inline-block;
+top:-100%;
+right:10%;
+
+}
+/*底部按钮*/
+.footer{
+  width:100%;
+  height:10%;
+  position:absolute;
+  bottom:0;
+  text-align:center;
+}
+.footer-btn-group{
+  width: 100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left: 0; 
+  align-items: center;
+  justify-content:center;
+  display: flex;
+}
+.footer-btn-icon{
+  width: 30%;
+  position: absolute;
+  bottom:0;
+  left:50%;
+  margin-left:-15%;
+}
+
+.footer-btn{
+  width:240rpx;
+  padding:20rpx 0;
+  text-align:center;
+  display:inline-block;
+  margin:0 30rpx;
+  color:#fff;
+  background:#2182E0;
+  border-radius:4px;
+}
+.footer-btn1{
+  background-color:#fff;
+  border:1px solid #2182E0;
+  color:#2182E0;
+}

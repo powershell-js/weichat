@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="containerew">
+  <view class='list'>
+    <ec-canvas class='cheliang' id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas>
+  </view>
+
+</view>

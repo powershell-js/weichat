@@ -1,0 +1,79 @@
+<!--pages/Vehicle_position/Vehicle_position.wxml-->
+<view class='conter'>
+  <view class='map'>
+    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="10"  bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" style="width: 100%; height: 100%;">
+      <!-- <view style='position:absolute;top:{{to}}px;left:{{le}}px'>1213</view> -->
+      <!-- <cover-view>2132</cover-view> -->
+    </map>
+  </view>
+
+  <cover-view class='content' style='position:absolute;top:0rpx;left:0rpx;'>
+    <cover-view class='top'>
+      <cover-view>{{allInfo.list[0].vehicleNo}}</cover-view>
+    </cover-view>
+    <cover-view class='center'>
+      <cover-view>时间：{{allInfo.list[0].gpsTime}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].vehicleType!=13&&allInfo.list[0].vehicleType!=12&&allInfo.list[0].vehicleType!=14&&allInfo.list[0].vehicleType!=''&&allInfo.list[0].vehicleType!=undefined}}">速度：{{allInfo.list[0].speed}}公里/小时</cover-view>
+      <cover-view wx:if="{{!(allInfo.list[0].vehicleType==(13||12||14||30))}}">acc：{{allInfo.list[0].acc==0?'开':(allInfo.list[0].acc==1?'关':allInfo.list[0].acc)}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].driverName!==(undefined||'')}}">司机：{{allInfo.list[0].driverName}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].Cooler}}">冷机1：{{allInfo.list[0].Cooler}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].Cooler1}}">冷机2：{{allInfo.list[0].Cooler1}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].Cooler2}}">冷机3：{{allInfo.list[0].Cooler2}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].Cooler3}}">冷机4：{{allInfo.list[0].Cooler3}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].magStatus1}}">门磁1：{{allInfo.list[0].magStatus1}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].magStatus2}}">门磁2：{{allInfo.list[0].magStatus2}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].magStatus3}}">门磁3：{{allInfo.list[0].magStatus3}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].magStatus4}}">门磁4：{{allInfo.list[0].magStatus4}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].isfixed!==(undefined||''||'-')}}">定位：{{allInfo.list[0].isfixed}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].tmpStatus}}">温度1：[{{allInfo.list[0].tmpStatus}}℃]</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].tmpStatus1}}">温度2：[{{allInfo.list[0].tmpStatus1}}℃]</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].tmpStatus2}}">温度3：[{{allInfo.list[0].tmpStatus2}}℃]</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].tmpStatus3}}">温度4：[{{allInfo.list[0].tmpStatus3}}℃]</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].vehicleType==6||allInfo.list[0].vehicleType==12||allInfo.list[0].vehicleType==13||allInfo.list[0].vehicleType==14||allInfo.list[0].vehicleType==30||allInfo.list[0].vehicleType==31}}">电量：{{allInfo.list[0].power}}%</cover-view>
+      <cover-view>所属分组：{{allInfo.list[0].ascription}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].other!==(undefined&&'')}}">光通量：{{allInfo.list[0].other}}</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].status==1?true:false}}">状态：运行</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].status==2?true:false}}">状态：停止</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].status==3?true:false}}">状态：报警</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].status==4?true:false}}">状态：异常</cover-view>
+      <cover-view wx:if="{{allInfo.list[0].stopTime}}">停车时长：{{allInfo.list[0].stopTime}}分钟</cover-view>
+      <cover-view class='positions'>位置：
+        <cover-view class='roadName'>{{allInfo.list[0].roadName}}</cover-view>
+      </cover-view>
+    </cover-view>
+    <cover-view class='line'></cover-view>
+    <cover-view class='bottom'>
+      <cover-view class='bottom1' bindtap='trajectory'>
+        <cover-image src='image/history_icon@3x.png'></cover-image>
+        <cover-view>轨迹</cover-view>
+      </cover-view>
+      <cover-view class='bottom1' bindtap="temperature">
+        <cover-image src='image/tep_icon@3x.png'></cover-image>
+        <cover-view>温度</cover-view>
+      </cover-view>
+      <cover-view class='bottom1' bindtap='mileage'>
+        <cover-image src='image/mileage_icon@3x.png'></cover-image>
+        <cover-view>里程</cover-view>
+      </cover-view>
+      <cover-view class='bottom1' bindtap='Overtemperature'>
+        <cover-image src='image/overtem_icon@3x.png'></cover-image>
+        <cover-view>超温</cover-view>
+      </cover-view>
+      <cover-view class='bottom1' bindtap='attention' wx:if="{{atten==0?true:false}}">
+        <cover-image src='image/Focuson_icon@3x.png'></cover-image>
+        <cover-view>关注</cover-view>
+      </cover-view>
+      <cover-view class='bottom1' bindtap='attention' wx:if="{{atten==1?true:false}}">
+        <cover-image src='image/hasbeenconcerned_icon@3x.png'></cover-image>
+        <cover-view>已关注</cover-view>
+      </cover-view>
+      <cover-view class='bottom1'>
+        <button open-type="share">
+          <cover-image src='image/share_icon@3x.png'></cover-image>
+          <cover-view class='share'>分享</cover-view>
+        </button>
+        
+      </cover-view>
+    </cover-view>
+  </cover-view>
+</view>

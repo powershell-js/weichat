@@ -1,0 +1,34 @@
+<view class='conter'>
+  <view class='list'>
+    <view>回到首页</view>
+    <view bindtap='backindex'>></view>
+  </view>
+  <view class='list'>
+    <view>客服咨询</view>
+    <view bindtap='zixun'>></view>
+  </view>
+  <view class='list'>
+    <view>意见反馈</view>
+    <view bindtap='yijian'>></view>
+  </view>
+  <view class='list'>
+    <view>版本号</view>
+    <view>{{SDKVersion}}</view>
+  </view>
+  <view class='list'>
+    <view>用户账号</view>
+    <view>{{username}}</view>
+  </view>
+  <view class='list lists'>
+    <view bindtap='backindex'>切换账号</view>
+  </view>
+  <view class='dialog' wx:if="{{missshow}}"></view>
+  <view class='dia-conter' wx:if="{{missshow}}">
+    <view class='test'>客服咨询</view>
+    <view class='test'>呼叫400-820-4680</view>
+    <view class='yes'>
+      <view bindtap='quxiao' class='tishi'>取消</view>
+      <view class='tishi' bindtap='dadianhua'>确定</view>
+    </view>
+  </view>
+</view>

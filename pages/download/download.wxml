@@ -1,0 +1,1 @@
+<web-view src="{{network}}"></web-view>

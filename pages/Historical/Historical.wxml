@@ -1,0 +1,62 @@
+<!--pages/Historical/Historical.wxml-->
+<view bindtouchmove='huadong' class='conter'>
+  <view class='input'>
+    <view class='date'>
+      <cover-image bindtap='date' class='date_img' src='image/drop-downchoice_default@3x.png'></cover-image>
+      <input bindtap='date' value='{{date}}'></input>
+      <cover-view class='seletdate' wx:if="{{dateShow}}">
+        <block wx:for="{{date_select}}">
+          <cover-view bindtap="seletdate" data-seletdate='{{item}}' class='font'>{{item}}</cover-view>
+        </block>
+      </cover-view>
+    </view>
+    <view class='equi'>
+      <cover-image bindtap='equipment' class='date_img' src='image/drop-downchoice_default@3x.png'></cover-image>
+      <input bindtap='equipment' value='{{equipment}}'></input>
+
+
+      
+    </view>
+    <view bindtap='submit' class='submit'>查询</view>
+  </view>
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="10" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location="true">
+  <!-- 选择 -->
+  <cover-view class='equipment' wx:if="{{equipmentShow}}">
+        <cover-view class='scrol'>
+          <block wx:for="{{equipment_select}}">
+            <cover-view bindtap="seletequipment" data-id='{{item.id}}' data-seletdate='{{item.text}}' class='font'>{{item.text}}</cover-view>
+          </block>
+
+        </cover-view>
+      </cover-view>
+  <!-- 选择 -->
+    <!-- <view style='position:absolute;top:{{to}}px;left:{{le}}px'>1213</view> -->
+    <cover-view class='info' wx:if="{{map_show}}">
+      <cover-view>总里程：{{info_list.countMileTotal}}KM</cover-view>
+      <cover-view class='info1 info3'>起点:{{info_list.locationStart}}</cover-view>
+      <cover-view class='info1'>终点:{{info_list.locationEnd}}</cover-view>
+    </cover-view>
+    <cover-view class='info_image' wx:if="{{map_show}}" bindtap='jump_detail'>
+      <cover-view><cover-image class='co_img' src='image/park_icon拷贝@3x.png'></cover-image></cover-view>
+      <cover-view class='locationEnd'>{{info_list.locationEnd}}</cover-view>
+      <cover-view><cover-image class='co_img' src='image/dianji@3x.png'></cover-image></cover-view>
+    </cover-view>
+    <cover-view class='controls' wx:if="{{map_show}}">
+      <cover-view class='process'>
+        <cover-view>
+          <cover-image bindtap='Left_forward' class='controls_img' src='image/kuajing@3x.png'></cover-image>
+        </cover-view>
+        <cover-view>
+          <cover-image bindtap='start' class='controls_img' src='image/kaishi@3x.png' wx:if="{{!start}}"></cover-image>
+          <cover-image bindtap='start' class='controls_img' src='image/timeout@3x.png' wx:if="{{start}}"></cover-image>
+        </cover-view>
+        <cover-view>
+          <cover-image bindtap='Right_forward' class='controls_img' src='image/houtui@3x.png'></cover-image>
+        </cover-view>
+      </cover-view>
+      <cover-view class='download'>
+        <cover-image class='download_img' src='image/xiazai@3x.png' bindtap='download'></cover-image>
+      </cover-view>
+    </cover-view>
+  </map>
+</view>

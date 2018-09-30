@@ -1,0 +1,74 @@
+<view class="conter">
+  <view class='top'>
+    <view class='dowload' bindtap='dowload'>
+      <cover-image class='co_img' src='image/下载@3x.png'></cover-image>
+    </view>
+    <view class='tem1'>
+      <view class='tem1_1'>
+        <!-- <image src='image/'></image> -->
+        <text>-油量1</text>
+      </view>
+      <!-- <view class='tem1_2'>
+        <view>最高:{{alldata.wXmaxTemps}}℃</view>
+        <view>最低:{{alldata.wXminTemps}}℃</view>
+        <view>平均:{{alldata.wXavgTemps}}℃</view>
+      </view> -->
+    </view>
+    <view class='tem1' wx:if="{{false}}">
+      <view class='tem1_2_2'>
+        <!-- <image src='image/'></image> -->
+        <text>-温度2</text>
+      </view>
+      <view class='tem1_2'>
+        <view>最高:30.5℃</view>
+        <view>最低:30.5℃</view>
+        <view>平均:30.5℃</view>
+      </view>
+    </view>
+    <view class='tem1' wx:if="{{false}}">
+      <view class='tem1_3'>
+        <!-- <image src='image/'></image> -->
+        <text>-温度3</text>
+      </view>
+      <view class='tem1_2'>
+        <view>最高:30.5℃</view>
+        <view>最低:30.5℃</view>
+        <view>平均:30.5℃</view>
+      </view>
+    </view>
+    <view class='tem1' wx:if="{{false}}">
+      <view class='tem1_4'>
+        <!-- <image src='image/'></image> -->
+        <text>-温度4</text>
+      </view>
+      <view class='tem1_2'>
+        <view>最高:{{alldata.wXmaxTemps}}℃</view>
+        <view>最低:{{alldata.wXminTemps}}℃</view>
+        <view>平均:{{alldata.wXavgTemps}}℃</view>
+      </view>
+    </view>
+    <view class='echart'>
+      <view class='list'>
+        <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas>
+      </view>
+    </view>
+  </view>
+  <view class='bottom'>
+    <view class='data_list'>
+      <view>时间</view>
+      <view>油量1</view>
+      <view>地点</view>
+    </view>
+    <view class='data_list_1'>
+      <view class='data_list_2' style='height:{{heigh}}rpx'>
+        <block wx:for="{{alldata.rows}}" wx:for-index="index">
+          <view class='data_lists'>
+            <view>{{item.gpsTime}}</view>
+            <view style='color:#2243FF;'>{{item.oil}}</view>
+            <view>{{item.location}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<view class='more_conter'>
+  <view class='more_head'>
+    <view class='Report'>
+      <view>
+        <view class='Report_image'>
+        <view></view>
+          <text>我的报表</text>
+        </view>
+        <view wx:if="{{!edit}}" bindtap='edit' class='edit'>编辑</view>
+        <view wx:if="{{edit}}" bindtap='edit' class='edit'>完成</view>
+      </view>
+      <view class='list'>
+        <view wx:for="{{url_data.length-1}}"  wx:if="{{url_data[index].hide}}"><image src='{{url_data[index].url}}'></image></view>
+      </view>
+    </view>
+    
+  </view>
+  <view class='more_bottom'>
+    <view class='list_image {{show_back==true?"show_back":""}}' wx:for="{{url_data.length-1}}">
+      <view bindtap='show_image' data-name='{{index}}' wx:if="{{edit}}">
+        <image wx:if="{{!url_data[index].hide}}" src='image/add@3x.png'></image>
+        <image wx:if="{{url_data[index].hide}}" src='image/delet@3x.png'></image>
+      </view>
+      <view wx:if="{{!edit}}" class='seize'></view>
+      <view>
+        <image src='{{url_data[index].url}}'></image>
+      </view>
+      <view class='bottom_font'>{{url_data[index].name}}</view>
+    </view>
+  </view>
+</view>

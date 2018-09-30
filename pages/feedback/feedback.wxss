@@ -1,0 +1,30 @@
+/* pages/feedback/feedback.wxss */
+.conter{
+  width: 100%;
+  height: 100vh;
+  background: #E2EAFB;
+  position: relative;
+}
+textarea{
+  position: absolute;
+  /* margin: 0 auto; */
+  width: 90%;
+  box-sizing: border-box;
+  /* border:2rpx solid #666; */
+  background: #fff;
+  top: 20rpx;
+  left: 40rpx;
+  padding: 20rpx;
+  /* margin-top: 20rpx; */
+}
+button{
+  position: absolute;
+  /* margin-top: 20rpx; */
+  width: 90%;
+  top: 350rpx;
+  left: 40rpx;
+}
+.hover{
+  background: #126BFC;
+  color:#fff;
+}

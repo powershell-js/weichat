@@ -1,0 +1,3 @@
+<view class='conter'>
+  <map id='myMap' latitude="31.210417" longitude="121.349433" scale="10" enable-overlooking="true" enable-rotate="true" markers='{{markers}}' show-compass="true" bindmarkertap='markertap'></map>
+</view>

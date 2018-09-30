@@ -1,0 +1,29 @@
+<!--pages/Rankings/Rankings.wxml-->
+<view class='conter'>
+  <view class='content' wx:for="{{License}}">
+    <view class='list'>
+      <view class='images'>
+        <image src='image/mingxi@3x.png'>
+          <view class='numlist'>{{(index+1)>9?(index+1):'0'+(index+1)}}</view>
+        </image>
+      </view>
+      <view class='License'>
+        <view>{{License[index].vehicleNo}}</view>
+        <view wx:if="{{title=='周超温排行'}}">超温时长：{{License[index].overTemperature}}分钟</view>
+        <view wx:if="{{title=='周里程排行'}}">里程：{{mileData[index]}}公里</view>
+        <view wx:if="{{title=='周停车排行'}}">停车时长：{{License[index].vehicleStopInterval}}分钟</view>
+      </view>
+    </view>
+    <!-- <view class='list'>
+      <view class='images'>
+        <image src='image/mingxi@3x.png'>
+          <view class='numlist'>01</view>
+        </image>
+      </view>
+      <view class='License'>
+        <view>13</view>
+        <view>13</view>
+      </view>
+    </view> -->
+  </view>
+</view>

@@ -1,0 +1,45 @@
+/* pages/Rankings/Rankings.wxss */
+page{
+background: #F5F5F7;
+}
+.conter{
+  width:100%;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  border: 0rpx solid red;
+  
+}
+.content{
+  width: 100%;
+  box-sizing: border-box;
+  /* border: 2rpx solid red; */
+}
+.list{
+  background: #fff;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20rpx;
+}
+.images>image{
+  width: 50rpx;
+  height: 62rpx;
+}
+.images{
+  position: relative;
+}
+.numlist{
+  position: absolute;
+  top: 0;
+  color:#fff;
+  font-size:34rpx;
+  left: 6rpx;
+}
+.License{
+  margin-left: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+.License>view:nth-child(2){
+  font-size: 28rpx;
+}

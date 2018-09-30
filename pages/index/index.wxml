@@ -1,0 +1,47 @@
+<view>
+  <!--index.wxml-->
+  <!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+  <view class='conter'>
+    <view class='head'>
+      <image src='./image/LOGO@3x.png'></image>
+    </view>
+    <view class='input'>
+      <image src='./image/username.png'></image>
+      <input placeholder-class="place-holder" bindinput="userName" value='{{username}}' placeholder='输入账号'></input>
+    </view>
+    <view class='input'>
+      <image src='./image/password.png'></image>
+      <input placeholder-class="place-holder" password="{{passwordshow}}" bindinput="passWord" value='{{password}}' placeholder='输入密码'></input>
+      <!-- <view class='lo-hide' wx:if="{{!passwordshow}}" bindtap='showpass'>hide</view>
+      <view class='lo-hide' wx:if="{{passwordshow}}" bindtap='showpass'>show</view> -->
+    </view>
+    
+    <view class='bottom'>
+      <view bindtap="denglu">登录</view>
+    </view>
+    <view class='title'>
+      <view style='color:#C1C1C1' bindtap='jizhu'><checkbox checked='{{checked}}'></checkbox>记住密码</view>
+      <view bindtap='experience'>免费体验</view>
+    </view>
+  </view>
+  <view class='dialog' wx:if="{{missshow}}"></view>
+  <view class='dia-conter' wx:if="{{missshow}}">
+    <view class='test'>客服咨询</view>
+    <view class='test'>呼叫400-820-4680</view>
+    <view class='yes'>
+      <view bindtap='quxiao' class='tishi'>取消</view>
+      <view class='tishi' bindtap='dadianhua'>确定</view>
+    </view>
+  </view>
+</view>

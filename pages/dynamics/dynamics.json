@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#126BFC",
+  "navigationBarTitleText": "油量动态明细表",
+  "navigationBarTextStyle": "#fff",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

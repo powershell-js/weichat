@@ -1,0 +1,221 @@
+/* pages/All_vehicles/All_vehicles.wxss */
+page{
+  background: #F4F4F4;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.All_vehicles{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+
+}
+.All_vehicles_conter{
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+
+  /* border:2rpx solid red; */
+  
+}
+.All_vehicles_conter>view{
+padding: 0 10rpx 10rpx 10rpx;
+}
+.All_vehicles_head{
+  width: 100%;
+  border-radius: 0 0 40px 40px; /* 左上、右上、右下、左下 */
+  height: 200rpx;
+  background: #0162FC;
+  /* background: #015AFD; */
+}
+.All_vehicles_input{
+ display: flex;
+ flex-direction: row;
+ height: 100rpx;
+ justify-content: space-between;
+}
+.All_vehicles_input input{
+  width: 40%;
+  height: 80rpx;
+  margin: auto;
+  font-size: 12px;
+    color: #fff;
+    text-align: center;
+  box-sizing: border-box;
+  /* border:2rpx solid #fff; */
+  border-radius: 10rpx;
+  background: #015AFD;
+}
+.place-holder {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+
+.All_vehicles_input image{
+  width: 50rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+.All_vehicles_yun{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 40rpx;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+}
+.All_vehicles_yun_1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  
+  text-align: center;
+}
+.All_vehicles_yun_1 image{
+  width: 10rpx;
+  height: 10rpx;
+  margin-bottom: 6rpx;
+  
+}
+.All_vehicles_list{
+  overflow: scroll;
+  width: 100%;
+  margin: 0 auto;
+  background: #F4F4F4;
+  /* height: 500rpx; */
+  box-sizing: border-box;
+  /* border:2rpx solid red; */
+}
+.All_vehicles_list_1{
+  width: 100%;
+  height: 200rpx;
+  background: #fff;
+  box-sizing: border-box;
+  /* border:2rpx solid #555; */
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.All_vehicles_list_1>view:nth-child(1){
+  box-sizing: border-box;
+  /* border:2rpx solid #555; */
+  width: 5%;
+  height: 100%;
+  font-size: 24rpx;
+  color:black;
+
+}
+.All_vehicles_list_1>view:nth-child(2){
+  box-sizing: border-box;
+  /* border:2rpx solid #555; */
+  width: 90%;
+  height: 100%;
+  /* font-size: 24rpx; */
+  color:black;
+
+}
+.All_vehicles_list_1>view:nth-child(3){
+  box-sizing: border-box;
+  /* border:2rpx solid #555; */
+  width: 5%;
+  height: 100%;
+  /* font-size: 24rpx; */
+  color:black;
+
+}
+.border_show{
+  box-sizing: border-box;
+  /* border:2rpx solid red; */
+  border:2rpx solid #fff;
+  border-radius: 30rpx;
+}
+.text{
+
+ overflow:hidden; 
+
+text-overflow:ellipsis;
+
+white-space:nowrap; 
+
+}
+.left{
+  position: relative;
+}
+.left>view{
+  
+  width: 10rpx;
+  height: 60rpx;
+}
+.run{
+background: #47B367;
+}
+.stop{
+background: #A3A2AE;
+}
+.warn{
+background: #F93957;
+}
+.ext{
+background: #BF53DF;
+}
+.center{
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  /* border:2rpx solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.center>view{
+  color: #B1B1B1;
+  font-size: 24rpx;
+}
+.center>view:nth-child(1){
+   color: #000;
+  font-size: 28rpx;
+}
+.right image{
+  width: 40rpx;height: 40rpx;
+  margin-top: 60rpx;
+  box-sizing: border-box;
+  /* border:2rpx solid blue; */
+  
+}
+.scolls{
+  width: 96%;
+  height: 1136rpx;
+  margin: 0 auto;
+  overflow: auto;
+  background: #fff;
+  box-sizing: border-box;
+  /* border:2rpx solid blue; */
+}
+
+.search2{
+  text-align: center;
+  margin: auto;
+}
+/* 右下角图标 */
+.swit{
+  position: fixed;
+}
+.swit_img{
+  width: 150rpx;
+  height: 150rpx;
+}

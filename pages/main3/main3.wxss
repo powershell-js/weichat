@@ -1,0 +1,28 @@
+.conter{
+  box-sizing: border-box;
+  border:2rpx solid black;
+  overflow: hidden;
+  width: 80%;
+  height: 10vh;
+  margin: 0 auto;
+  margin-top: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+}
+.contain{
+  border: 2rpx solid #555;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  height: 8vh;
+  
+}
+.list{
+  display: flex;
+  align-items: center;
+  width:40rpx; 
+  border-right: 2rpx solid #555;
+  box-sizing: border-box;
+  justify-content: center;
+}

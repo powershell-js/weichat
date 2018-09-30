@@ -1,0 +1,45 @@
+<view class="conter">
+  <view class='download' bindtap='download'>
+    <cover-image class='co_img' src='image/下载@3x.png'></cover-image>
+    
+  </view>
+  <view class='content'>
+    <block wx:for="{{mileinfo}}">
+      <view class='list'>
+        <view class='image'>
+          <text wx:if="{{index<9}}">0{{index+1}}</text>
+          <text wx:if="{{index>8}}">{{index+1}}</text>
+          <image src='image/mingxi@3x.png'></image>
+        </view>
+        <view class='list_info'>
+          <view>{{item.vehicleNo}}</view>
+          <view>开始里程：{{item.mile}}公里</view>
+          <view>开始时间：{{item.gpsTime}}</view>
+          <view>结束时间：{{item.endTime}}</view>
+          <view>
+            <view class='qidians'>地点:</view>
+            <view>{{item.location}}</view>
+          </view>
+          <view>
+            <view class='qidian'>油量变化(升):</view>
+            <view class="{{item.type==1?'green':'red'}}">{{item.type==1?'+':'-'}}{{item.leakOil}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- <view class='list'>
+      <view class='image'>
+        <text>01</text>
+        <image src='image/mingxi@3x.png'></image>
+      </view>
+      <view class='list_info'>
+        <view>沪ED9253</view>
+        <view>行驶里程：998.6公里</view>
+        <view>开始时间：2018-09-18 08：46:00</view>
+        <view>结束时间：2018-09-18 08：46:00</view>
+        <view><view class='qidian'>起点:</view><view>广西壮族自治区南宁市遂宁去蒲庙镇S5101南宁绕城告诉</view></view>
+        <view><view class='qidian'>终点:</view><view>广西壮族自治区南宁市遂宁去蒲庙镇S5101南宁绕城告诉</view></view>
+      </view>
+    </view> -->
+  </view>
+</view>

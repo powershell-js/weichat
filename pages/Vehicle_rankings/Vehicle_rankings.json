@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#126BFC",
+  "navigationBarTitleText": "车辆排行",
+  "navigationBarTextStyle": "#fff",
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

@@ -1,0 +1,125 @@
+/* pages/more/more.wxss */
+
+.more_conter {
+  width: 100%;
+  height: 100vh;
+  background: #dcdcde;
+}
+
+.more_head {
+  width: 100%;
+  margin-bottom: 20rpx;
+  background: #fff;
+  padding: 3%;
+  box-sizing: border-box;
+}
+
+.more_bottom {
+  width: 100%;
+  background: #fff;
+  padding: 1%;
+}
+
+.Report {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.Report>view:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.list_image {
+  width: 22%;
+  height: 240rpx;
+  box-sizing: border-box;
+  margin: 1% 0 1% 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.more_bottom {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list_image>view:nth-child(1) image {
+  box-sizing: border-box;
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 104rpx;
+}
+
+.list_image>view:nth-child(2) image {
+  box-sizing: border-box;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.list_image>view:nth-child(3) {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 34rpx;
+  text-align: center;
+}
+
+.list_image>view {
+  overflow: hidden;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+}
+
+.list>view {
+  width: 20%;
+  height: 90rpx;
+  box-sizing: border-box;
+}
+
+.list>view>image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.bottom_font {
+  font-size: 28rpx !important;
+}
+
+.edit {
+  color: #588cfc;
+  background: #e5edfc;
+  box-sizing: border-box;
+  border: 1rpx solid #588cfc;
+  width:100rpx;
+height:60rpx;
+text-align: center;
+}
+
+.seize {
+  box-sizing: border-box;
+  width: 60rpx;
+  height: 70rpx;
+  margin-left: 104rpx;
+}
+
+.show_back {
+  background: #e5edfc;
+}
+
+.Report_image {
+  display: flex;
+  flex-direction: row;
+}
+
+.Report_image>view {
+  width: 16rpx;
+  height: 50rpx;
+  box-sizing: border-box;
+  background: #588cfc;
+}

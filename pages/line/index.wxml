@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="containerew">{{heights}}px
+  <view class='list' style='width:{{heights}}px;height:{{widths}}px;'>
+    <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas>
+  </view>
+
+</view>
